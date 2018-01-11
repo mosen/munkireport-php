@@ -1,7 +1,7 @@
 <?php
 
 use munkireport\models\Migration;
-use Illuminate\Database\Capsule\Manager as Capsule;
+
 
 require('kissmvc_core.php');
 

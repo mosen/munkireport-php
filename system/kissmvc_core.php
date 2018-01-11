@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Container\Container;
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 /*****************************************************************
 Copyright ( c ) 2008-2009 {kissmvc.php version 0.7}
 Eric Koh <erickoh75@gmail.com> http://kissmvc.com
@@ -247,8 +250,12 @@ abstract class KISS_Engine
 
 abstract class KISS_Controller
 {
+    protected $app;
+    
     public function __construct()
     {
+        $this->app = new Container();
+        $capsule = new Capsule($this->app);
 
     }
 }
