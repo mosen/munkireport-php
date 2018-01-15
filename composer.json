@@ -12,12 +12,20 @@
         "guzzlehttp/guzzle": "~6.0",
         "hautelook/phpass": "^1.1",
         "illuminate/console": "~5.4",
-        "illuminate/database": "5.4.36",
+        "illuminate/database": "~5.5",
         "illuminate/filesystem": "~5.4",
         "league/flysystem": "~1.0",
         "rodneyrehm/plist": "^2.0",
         "doctrine/dbal": "~2.5",
-        "defuse/php-encryption": "^2.1"
+        "defuse/php-encryption": "^2.1",
+        "laravel-zero/foundation": "^5.5",
+        "illuminate/http": "^5.5",
+        "illuminate/events": "^5.5",
+        "illuminate/log": "^5.5",
+        "symfony/debug": "3.3",
+        "illuminate/routing": "^5.5",
+        "vlucas/phpdotenv": "^2.4",
+        "illuminate/config": "^5.5"
     },
     "suggest": {
         "onelogin/php-saml": "^2.12 Required for SAML authentication",
@@ -27,7 +35,8 @@
         "psr-4": {
             "munkireport\\models\\": "app/models/",
             "munkireport\\controller\\": "app/controllers",
-            "munkireport\\lib\\": "app/lib/munkireport"
+            "munkireport\\lib\\": "app/lib/munkireport",
+            "Mr\\": "mr"
         }
     }
 }
