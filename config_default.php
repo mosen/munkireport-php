@@ -821,7 +821,7 @@
 	|     'charset' => 'utf8mb4',
 	|     'collation' => 'utf8mb4_unicode_ci',
 	|     'strict' => true,
-	|     'engine' => 'InnoDB',
+	|     'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
 	|     'options' => [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4'],
 	| ];
 	|
@@ -840,7 +840,7 @@
 	    $conf['connection']['charset'] = getenv_default('CONNECTION_CHARSET', 'utf8mb4');
 	    $conf['connection']['collation'] = getenv_default('CONNECTION_COLLATION', 'utf8mb4_unicode_ci');
 	    $conf['connection']['strict'] = getenv_default('CONNECTION_STRICT', true, 'bool');
-	    $conf['connection']['engine'] = getenv_default('CONNECTION_ENGINE', 'InnoDB');
+	    $conf['connection']['engine'] = getenv_default('CONNECTION_ENGINE', 'InnoDB ROW_FORMAT=DYNAMIC');
 	    // TODO: connection options
         }
 
