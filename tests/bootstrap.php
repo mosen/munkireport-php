@@ -15,6 +15,7 @@ define('APP_ROOT', dirname(PUBLIC_ROOT) . '/' );
 // Load config
 require APP_ROOT.'app/helpers/config_helper.php';
 initDotEnv();
+load_conf();
 
 // Load conf (keeps variables out of global space)
 function load_conf()
