@@ -21,7 +21,7 @@ class MigrationTest extends TestCase
             'host' => 'localhost',
             'database' => 'munkireport_test',
             'username' => 'root',
-//            'password' => '',
+            'password' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
         ]);
