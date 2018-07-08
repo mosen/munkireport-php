@@ -1,6 +1,8 @@
 language: php
 php:
   - '7.1'
+services:
+  - mysql
 mysql:
   database: travis_ci_munkireport_php_test
   username: root
@@ -8,12 +10,15 @@ mysql:
 cache:
   directories:
     - vendor
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS munkireport_test;'
 install:
   - composer install --no-dev
   - composer require adldap2/adldap2 --update-no-dev
   - composer require onelogin/php-saml --update-no-dev
 
 script:
+  - phpunit --configuration phpunit.xml
   - tar cfz "${HOME}/munkireport-php-${TRAVIS_TAG}.tar.gz" *
   - zip -r "${HOME}/munkireport-php-${TRAVIS_TAG}.zip" *
 
