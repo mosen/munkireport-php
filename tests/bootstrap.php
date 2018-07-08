@@ -27,10 +27,9 @@ function load_conf()
     // Load default configuration
     require_once(APP_ROOT . "config_default.php");
 
-    if ((include_once APP_ROOT . "config.php") !== 1)
+    if ((include_once "test_config.php") !== 1)
     {
-        fatal(APP_ROOT. "config.php is missing!<br>
-	Unfortunately, Munkireport does not work without it</p>");
+        throw new \Exception('test_config missing');
     }
 
     // Convert auth_config to config item
