@@ -21,7 +21,7 @@ class MigrationTest extends TestCase
             'host' => 'localhost',
             'database' => 'munkireport_test',
             'username' => 'root',
-            'password' => '',
+            'password' => null,
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
         ]);
@@ -47,7 +47,7 @@ class MigrationTest extends TestCase
         $files = new Filesystem();
         $migrator = new Migrator($repository, $this->capsule->getDatabaseManager(), $files);
         $dirs = [__DIR__ . '/../database/migrations'];
-        $migrationFiles = $migrator->run(array_merge($dirs, $this->migrationDirList), ['pretend' => false]);
+        $migrationFiles = $migrator->run(array_merge($dirs, $this->migrationDirList));
 
         echo $migrationFiles;
 
