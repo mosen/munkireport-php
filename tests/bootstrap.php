@@ -4,13 +4,13 @@ require_once(__DIR__ . '/../system/kissmvc.php');
 
 // Below are functions defined in index.php that are needed to run isolated controller tests.
 
-define( 'KISS', 1 );
+!defined('KISS') && define( 'KISS', 1 );
 
 // Front controller
-define('FC', realpath(__DIR__ .'/../public/index.php') );
+!defined('FC') && define('FC', realpath(__DIR__ .'/../public/index.php') );
 
-define('PUBLIC_ROOT', __DIR__ . '/../public' );
-define('APP_ROOT', dirname(PUBLIC_ROOT) . '/' );
+!defined('PUBLIC_ROOT') && define('PUBLIC_ROOT', __DIR__ . '/../public' );
+!defined('APP_ROOT') && define('APP_ROOT', dirname(PUBLIC_ROOT) . '/' );
 
 // Load config
 require APP_ROOT.'app/helpers/config_helper.php';
@@ -89,13 +89,13 @@ function sess_set($sess_item, $value)
 //===============================================
 // Defines
 //===============================================
-define('INDEX_PAGE', conf('index_page'));
-define('SYS_PATH', conf('system_path') );
-define('APP_PATH', conf('application_path') );
-define('VIEW_PATH', conf('view_path'));
-define('MODULE_PATH', conf('module_path'));
-define('CONTROLLER_PATH', conf('controller_path'));
-define('EXT', '.php'); // Default extension
+!defined('INDEX_PAGE') && define('INDEX_PAGE', conf('index_page'));
+!defined('SYS_PATH') && define('SYS_PATH', conf('system_path') );
+!defined('APP_PATH') && define('APP_PATH', conf('application_path') );
+!defined('VIEW_PATH') && define('VIEW_PATH', conf('view_path'));
+!defined('MODULE_PATH') && define('MODULE_PATH', conf('module_path'));
+!defined('CONTROLLER_PATH') && define('CONTROLLER_PATH', conf('controller_path'));
+!defined('EXT') && define('EXT', '.php'); // Default extension
 
 require( APP_PATH.'helpers/site_helper'.EXT );
 
