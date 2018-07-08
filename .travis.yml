@@ -16,6 +16,8 @@ install:
   - composer install --no-dev
   - composer require adldap2/adldap2 --update-no-dev
   - composer require onelogin/php-saml --update-no-dev
+  - composer dump-autoload
+
 
 script:
   - phpunit --configuration phpunit.xml
