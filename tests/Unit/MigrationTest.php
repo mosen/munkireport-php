@@ -21,12 +21,13 @@ class MigrationTest extends TestCase
             'host' => 'localhost',
             'database' => 'munkireport_test',
             'username' => 'root',
+            'password' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
         ]);
 
-        $this->capsule->setAsGlobal();
-        $this->capsule->bootEloquent();
+//        $this->capsule->setAsGlobal();
+//        $this->capsule->bootEloquent();
 
         // Load migrations within modules
         $moduleMgr = new ModuleMgr;
