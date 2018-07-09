@@ -26,8 +26,8 @@ class MigrationTest extends TestCase
             'collation' => 'utf8mb4_unicode_ci',
         ]);
 
-//        $this->capsule->setAsGlobal();
-//        $this->capsule->bootEloquent();
+        $this->capsule->setAsGlobal();
+        $this->capsule->bootEloquent();
 
         // Load migrations within modules
         $moduleMgr = new ModuleMgr;
