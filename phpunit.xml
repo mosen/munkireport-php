@@ -25,7 +25,7 @@
     <php>
         <env name="CONNECTION_DRIVER" value="mysql" />
         <env name="CONNECTION_DATABASE" value="munkireport_test" />
-        <env name="CONNECTION_USERNAME" value="travis" />
-        <env name="CONNECTION_PASSWORD" value="" />
+        <!--<env name="CONNECTION_USERNAME" value="root" />-->
+        <!--<env name="CONNECTION_PASSWORD" value="" />-->
     </php>
 </phpunit>

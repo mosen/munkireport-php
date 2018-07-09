@@ -20,7 +20,7 @@ class MigrationTest extends TestCase
             'driver' => 'mysql',
             'host' => 'localhost',
             'database' => 'munkireport_test',
-            'username' => 'travis',
+            'username' => 'root',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
         ]);
